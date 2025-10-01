@@ -24,10 +24,23 @@ body { background-color:var(--dark);}
 </head>
 <body class="p-4 md:p-8 max-w-[95%] mx-auto">
 
-<header class="mb-8">
-  <h1 class="text-3xl font-bold">Welcome <span class="text-green-500">$</span> <span id="typing-effect"></span><span class="cursor"></span></h1>
-  <p class="text-green-300">Team BD Cyber Ninja | 20 Specialists</p>
+<header class="mb-8 flex flex-col md:flex-row items-center justify-between">
+  <!-- Left Side: Text -->
+  <div>
+    <h1 class="text-3xl font-bold">
+      Welcome <span class="text-green-500">$</span>
+      <span id="typing-effect"></span><span class="cursor"></span>
+    </h1>
+    <p class="text-green-300">Team BD Cyber Ninja | 20 Specialists</p>
+  </div>
+
+  <!-- Right Side: Banner Image -->
+  <div class="mt-4 md:mt-0 md:ml-6">
+    <img src="/images/photo_2025-10-01_21-46-49.jpg" alt="Team BD Cyber Ninja Banner"
+         class="max-h-32 rounded shadow-md border border-green-800"/>
+  </div>
 </header>
+
 
 <!-- Nav -->
 <nav class="mb-8 flex flex-wrap gap-2 text-sm sticky top-0 bg-gray-900 bg-opacity-90 py-3 z-20 px-2">
@@ -87,7 +100,7 @@ body { background-color:var(--dark);}
 
 <script>
 // Typing effect
-const phrases=["who we are","elite security team","future-ready"];
+const phrases=["who we are","black hat hacker team","future-ready"];
 let currentPhrase=0,currentChar=0,isDeleting=false;
 const typingElement=document.getElementById('typing-effect');
 function typeWriter(){
