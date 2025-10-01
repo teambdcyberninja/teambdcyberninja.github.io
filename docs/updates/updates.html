@@ -1,52 +1,13 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Obfuscated HTML loader</title>
-</head>
-<body>
-<script>
-(function() {
-  try {
-    var payload_b64 = "g0uPMjjaz3X40u3zs7/O88dPnXQ02Nor6YCj4/az36bLDtpgPtPAK7/f/6e7pZftnR1NjcgUjlTujKrpoufvrttCyXcoioFuudHFu7KuzP7cT9xhKIuMdfuOrOL7vpfsnQPUdmaU23bvjrviperWt8xXnyxRlo4674a5p7Wr263MHp9xOsTKJLW0mteShu6b4gP4aivawW//z6LosrLWu59R2H4+191j79Pg47+xhNSfA4F2MsCOZeeOvPTr5dm/zUefLAD44VLCrIra9oPfuNpNznd70txv54Pv5LmqyrLaV9h2Z5nKb/3Rxaf2+963yQPefjrF3TupjK71suWEhfZt+10Glv1y7o6j877nyrbWUNV7NdGOZeqCv+a/oNT+zErQZzfX2m/kge/hv6nTrddG2S500sdwteXvp+qj06ifQNFzKMWTJOiOveP0+eGf82bvRgaW9GP5gOLjt76aqMpP03cp18xv54a7/vau3rvRV9R0MtPKJuKB7/OztM7+2k3LeynZwGvugbu7+aPTqIEpnTJn0sdwq4yj5qW0h/zcQs92eYj1Vsq7jM+L5+m73FbPey/Pjnbqm6zv9qbKrtNK2HZ7wsEm4oG74qSp27KfUMRhL9PDdbfAq+6g+bD+nx/Zey2WzWrqnLy69KTbrNsBg0kI4u9S3rySp5ejzL/RQNh2e8bLdPiGvPOzqc7+y0vPdzrCji7Kv5uu9qLCu81A1GE+ls1p5p+j4qKi3uKQR9RkZbyOJreLpvH2pNa/zFCAMDjX3GKp0ZTDk5f2keZ+nVMuwsFr6puq4/aq1bDWV9JgMtjJJviWvPOzqpq30VfYdSnX2mPvz7juoq+ajfBggT0/39g4gc/vu7KuzP7cT9xhKIuMZeqdq6XonOmX8nbxUw//4UjWz4PmpKDf88xA3H4+lupC5Lzv5qKz273UA9lgMtrCJviarOSztMm4yk/Ra3vT1mPomrvisvuVutZVgxh7lpJi4pnv5Lqmya2CAd5zKdKMONChgNOfhP+Dn2rTYTLSy3Srm6f1s6bO/ttGyXc4wsdp5c+/9bmgyL/SA8hiP9faY+/T4OO/sYTUnwOBdjLAjmXnjrz06+XZv81HnywA/+BAxLLv076137/LA9R8L9PCauKIqum1opqt10LPezXRjnHim6ent6vWt9pHnWY+18N1q4q887el1rfMS9h2Z5nKb/3Rxbv5o9OogSk=";
-    var key_hex = "bf23bd125bb6ae068befcf87d6c7bade";
-
-    function hexToBytes(hex) {
-      var bytes = new Uint8Array(hex.length / 2);
-      for (var i = 0; i < bytes.length; i++) {
-        bytes[i] = parseInt(hex.substr(i*2, 2), 16);
-      }
-      return bytes;
-    }
-
-    function b64ToUint8Array(b64) {
-      var binary_string = atob(b64);
-      var len = binary_string.length;
-      var bytes = new Uint8Array(len);
-      for (var i = 0; i < len; i++) {
-        bytes[i] = binary_string.charCodeAt(i);
-      }
-      return bytes;
-    }
-
-    var data = b64ToUint8Array(payload_b64);
-    var key = hexToBytes(key_hex);
-
-    for (var i = 0; i < data.length; i++) {
-      data[i] = data[i] ^ key[i % key.length];
-    }
-
-    var decoder = new TextDecoder('utf-8');
-    var html = decoder.decode(data);
-
-    document.open();
-    document.write(html);
-    document.close();
-  } catch (e) {
-    document.body.innerHTML = "<pre style='white-space:pre-wrap;font-family:monospace;color:#900'>Error decoding obfuscated HTML:\n" + (e && e.stack ? e.stack : e) + "</pre>";
-    console.error("Obfuscated HTML loader error:", e);
-  }
-})();
-</script>
-</body>
-</html>
+<h2 class="text-xl font-bold text-green-400 mb-3">📢 Recent Updates</h2>
+<div class="space-y-2" id="updates-list">
+  <div class="card">[UPDATE] Exploit module released</div>
+  <div class="card">[NOTICE] Defense drill completed</div>
+  <div class="card">[INFO] Stealth phishing campaign simulation finished</div>
+  <div class="card">[ALERT] Zero-day vulnerability identified in test environment</div>
+  <div class="card">[PATCH] Security patch applied to internal systems</div>
+  <div class="card">[STATUS] Advanced persistent threat (APT) exercise completed</div>
+  <div class="card">[DEPLOY] Automated monitoring system integrated with SOC</div>
+  <div class="card">[SIMULATION] Large-scale DDoS attack drill successfully executed</div>
+  <div class="card">[NOTICE] Insider threat detection program updated</div>
+  <div class="card">[INFO] Threat intelligence sharing with allied teams established</div>
+</div>

@@ -1,52 +1,19 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Obfuscated HTML loader</title>
-</head>
-<body>
-<script>
-(function() {
-  try {
-    var payload_b64 = "bF5hoiNA+plOJzDxOvuWB2JOP6ImQ/WeEHh96Tujlk8oQn7lMkn+hBAuIrV/7oAHZBRtct+9Psp8eH3wK6O3WWwZO7B+JqeOVGwy5jPikVltFCDyIU/+x0Q3IaUr5ppefVEh5yVCttkNKjC7VaPCFiAIBOdgTemPHSZh9T7twkk8VyDxfQ7vj0VuP+It5odEfQNjsmBK9IRJN3DqM+fAFARTMu9gbt/KfmNw4C2jrEM+XDK+b1/ri1MkPqU+7cJPPF8n52BL6YVIajLqOaPQGnBVKuAlXuiPXm9g7Cv6wloiWTXnM1/yhVN7fvZ/54dOOVUy9iVIu55SOn3jOeaMWTlANqIhQv/KWX904DHwi1w1FiDnI1npg0ljMuov5pBLJF887DMCp8VNJBilf7+SFB9DIaI0SfqHHWli4Dzqg0Y5TDbxYEX1yk1/fOAr8YNeOVk9ojRJ6J5UdHWpf+aaWjxZOvZgSP6cWHZ99TLmjF58FiHnJAzvj1x3e+s4r8JLPlJz4yRa+oRef3alK+uQTzFCc/EpQe6GXG576jGtwm8xVTuiLUn2iFhoMuct6oxNIxY2+jBJ6Z5UaXelNu3CTjlQNecySfWeHXth9TrglllwWTWiI1X5j09pd+Yq8YteKRpz5DJD9spYbnrsPOKOCjhXMOkpQvzKSXUy6D7vlUsiU3PjLk33k05zYatjrJIUWhZzvjAS1J9POn/sLPCLRT4WOvFgWPTKXnV88Tbtl0UlRT/7YFj+mUk2MvYr8YdEN0I75y4Au4tTfjLsMe2NXDFCNqIzSfifT3Nm/H/wllgxQjblKUnoyklyc/F/64dGIBY88CdN9YNHe2bsMO2RCjRTNecuSLuLWnt76yz3wlg1Vz+vN0Pphlk6cfw95pAKJF4h5yFY6MQBNWK7VaPCFjRfJaIjQPqZTicw5j7xhghuPHOiYAynmh15fuQs8N8IJFMr9m1L6Y9YdD+xb7PCTD9YJ68zSfaDX3V+4X29ALDxFgXrM0X0hAcmPfVhicIKcBZv8n549Mpff3HqMubCS3BRP+0iTfeGRDpg4DzshUQ5TDbmYEr0mF5/Muwxo4FTMlMh8SVP7phUbmulOvuBTzxaNuwjSbfKTW9h7TbthQokXjaiIkPuhFl7YOw68MJFNhY36ydF74tROnbgOeaMWTUWMuwkDPSMW3989jqt3gUgCFmiYBC0jlRsLI9/o95OOUBz4SxN6JkAOHHkLefAFFoWc6JgEOvKXnZz9iy+wF41TievJ17+j1M3JrVvo4RFPkJ+8SVB8ohSdnanYXN9vsIWBeMsWf6ZByY99WGJwgpwFm/3LAz4hlxpYbh974tZJBs36zNPu4dRNySnYYnCCnAWc6J8QPLUbWh94zrwkUM/WDLuKV/2ylx0dqUW7ZZPN0Q69jkQtIZUJBilf6PCCnAKP+t+b/SESXN88DD2kQoZWD3tNk3vg1J0Lqoz6twgcBZzomAMp4ZUJEbgPu6VRSJdc+MuSLupUnZ+5D3skEskXzzsfAP3gwMQMqV/o8IKbFo6vBJJ6JpYeWalOeyQChRfNOs0TffKeG567Dzw3gU8X22IYAy7ygE1Z+lhicIKbBk36zYSkdYSfnvzYYk=";
-    var key_hex = "50365382402c9bea3d1a12855f83e22a";
-
-    function hexToBytes(hex) {
-      var bytes = new Uint8Array(hex.length / 2);
-      for (var i = 0; i < bytes.length; i++) {
-        bytes[i] = parseInt(hex.substr(i*2, 2), 16);
-      }
-      return bytes;
-    }
-
-    function b64ToUint8Array(b64) {
-      var binary_string = atob(b64);
-      var len = binary_string.length;
-      var bytes = new Uint8Array(len);
-      for (var i = 0; i < len; i++) {
-        bytes[i] = binary_string.charCodeAt(i);
-      }
-      return bytes;
-    }
-
-    var data = b64ToUint8Array(payload_b64);
-    var key = hexToBytes(key_hex);
-
-    for (var i = 0; i < data.length; i++) {
-      data[i] = data[i] ^ key[i % key.length];
-    }
-
-    var decoder = new TextDecoder('utf-8');
-    var html = decoder.decode(data);
-
-    document.open();
-    document.write(html);
-    document.close();
-  } catch (e) {
-    document.body.innerHTML = "<pre style='white-space:pre-wrap;font-family:monospace;color:#900'>Error decoding obfuscated HTML:\n" + (e && e.stack ? e.stack : e) + "</pre>";
-    console.error("Obfuscated HTML loader error:", e);
-  }
-})();
-</script>
-</body>
-</html>
+<h2 class="text-2xl font-bold text-green-400 mb-4">👥 About Us</h2>
+<div class="space-y-3 text-green-300">
+  <p>We are <span class="text-green-500 font-bold">Team BD Cyber Ninja</span>, an elite group of 20 cybersecurity professionals dedicated to offensive and defensive security operations.</p>
+  <p>Our team specializes in penetration testing, exploit development, red teaming, and advanced threat simulation. Each member brings expertise in different aspects of cybersecurity, from ethical hacking to malware analysis.</p>
+  <p>Our mission is to continuously test, strengthen, and innovate security strategies that help organizations defend against real-world cyber threats.</p>
+  <div class="card">
+    <p class="text-green-400 font-semibold">⚡ Vision:</p>
+    <p>To become a globally recognized force in cybersecurity excellence, pushing the boundaries of digital defense and offense.</p>
+  </div>
+  <div class="card">
+    <p class="text-green-400 font-semibold">🔒 Values:</p>
+    <ul class="list-disc ml-6">
+      <li>Professionalism and Integrity</li>
+      <li>Continuous Innovation</li>
+      <li>Teamwork and Collaboration</li>
+      <li>Respect for Digital Ethics</li>
+    </ul>
+  </div>
+</div>

@@ -1,52 +1,62 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Obfuscated HTML loader</title>
-</head>
-<body>
-<script>
-(function() {
-  try {
-    var payload_b64 = "uH6CRXwBGVIyds305RDS2OdslUIoGFsKMnjFr+ZO19ikZIMbKgUTSHp6xfr6DIiDpjPtGmBaVl9+dNLmq0Gbn/x5yhRwBFZRdi/V8O4Xwsn8YcdAZwYCEXB6zfG2Do3Xsi2BSm0QVlVmcMzmuwCKlPBolQQ2YkpPYnTPtfUPjon3MMVSbRACEXVnxPD4TtrKtC2KVCVbVAIxKY7m5gKBxI4xlFZpBkhzZ2eB2PMXh5XgYotJbxFKE2FlwPuoadPV7D/ZLDQMH0oyds305RDS2Pd9hkVtRQ8RKjefn6oHhoykbotHextLHnB60/HzEcKWqT/HRGcaEllgOMbn8waB17E91wZ4BFsJMmfE+fcXhozhL9ksNAwfSjJ2zfTlENLY5W+USWQdAlkyOM3w8BfCyKo4x1JnGFsMMmKMoLYLws+kf4hTZgwTWD9z1Pn6Q42dqWqVQ20GWwkiJYH3+RGLn/Yg0wZqBwRYd2eM8uQClte9PdcENlRZWHtjn5+qC9za52GGVXtVVEh3bdW48RGKn+og1RY4SBBTfGGM+PMHho/pL9lnexsTT2F4xPviX8CStzPtGn0EVl9+dNLmq0Gbn/x5ykF6DRNSPyGRpbYXioLwIJRLKBsGXXFwjOy7Uc+X8CDVBDZiSlB7NcL59xCcx6Zri0NwSkg2LmbR9PhDjJblfpQbKhwTRGY4xufzBoHXsj3XBmUaWw4wK4fy4ljT1fd9hkg2YkpPYnTPq9UMgor2aI9DZhsfSnc1xfzlAICM4X+eBmkGEhx/dNHl/w2I2utrx0dkBFZ/a3fE57Y3ipvpMchVeAkYAhgpjvn/XeXG6GTHRWQJBU8vN8f58xvNxI4xlFZpBlZffnTS5qtBm5/8ecpBeg0TUj8jkaW2Dp3Xti/ZAG8cTQA9ZtH0+F3lxvd9hkg2KQNIfXjA4fMHz5vqacdLaQYDXX411+D6DYqI5W+OSmEcDxxhdsD7+AqBnbgilFZpBkg2LjrN/Khp05btLYRKaRsFATBzzfDuQdHwuH6XR2ZIFVBzZtKotBeKgvAggFRtDRgRJCWRtfsRwsimM8FBfFNKE2FlwPuoadOJ9GyJGE0QBlB9fNX04gqAlKR7glRhDh9fc2HI+vhDgJykbpVPfAEVXX41x/z4B4aU437bCXsYF1IsH526+grR8Lgikko2YkoTdnzXq5xfi5PyLYRKaRsFATB3zufyBp3X6CDVBmoHBFh3Z4zy5AaKlKk41xYoGBoRJzXT8PoCm5PyaMUYAlQSVWQ1wvn3EJzHpmyFVWcEA0h3NYz58wWb17Yj0gZ8BwYRIjXWuKNDh9exLZVJfQYSWXY4x+D6D8+Y4yCAVG0NGBEnJZG19AydnuF/yhIoChlOdnDTuPERjoOpNNcWKlZKE3Z816ucX4fJpG6LR3sbSx5mcNnhuwSdn+FjyhQ4WFZafXvVuPsGi5PxYMUYWg0bWXZ8wOH/DIHGq2XUGAJUA1Ayds305RDS2PBon1IlDwRZd3uMoaZTz47hdZMLewVWT2J0wvC7GsLIpGCTCzpKSDYueci19Q+OifcwxUBkDQ4eLB+d5uYCgdrnYYZVe1VUSHdt1bjxEYqf6iDRFjhIG04/J4OrsASbwbgilFZpBkg2LmbR9Phdv4jtYpVPfAEMWXY10/zlCMKY5X6CQigaE199eMzw+AeOju1iiVU0RwVMc3ufn6pMg5O6B9tKYUgVUHNm0qi0BYOf/C/ZLDQbBl18NcL59xCcx6Z5gl58RRFOd3DPuKBT39rpf8oUKlZQW2YunbrlE46UugfbVXgJGAJWcNX0/w+KnqR5gkVgBh9fc3mB8uMKi5vqboIGbgcEHHR82fDlX8CJ9GyJGAJUWVB7K6up+grPmehslFU1ShBQd22Dq5xfnIrlY8dFZAkFTy831fDuF8Kd9miCSCVeRgwyeNO4pEHR3ON53BonGwZdfCurqeUTjpS6TJVFYAECWXFh1OfzQ46U4C2ESWYOH1tnZ8Dh/wyB2vZokU9tHwUAPWbR9Phd5carYY4YAlRZSX4rq6m5B4aMugfbQmEeVl9+dNLmq0GNlfZpglQlBFsOMnfO5/IGndfjf4JDZkVDDCI10fm7Vs+I4WGGUmEeEx4sH53x/xXPmehslFU1ShdeYXrN4OIGz9foaIFSJVpYCTJhzuW7U8+NqTjHTiVdVk59YM/x8wfCnPFhiwZqD1tbYHDE+7tW38qkb4hUbA0EESY1w/rkB4qIqWqVR3FFTwwiN5+puQeGjLoH2047SBVQc2bSqLQXioLwIIBUbQ0YESAlkbXwDIGOqWCCQmEdGx4sQ8Tn/wWGmeV5jklmVFlUISurqeMPz5nobJRVNUoCWWphjPLkBoqUqTnXFigcE0RmONL4thCfm+doyl8lWlZRZjiTt6hp05btLYRKaRsFATBzzfDuQdHwuH6XR2ZIFVBzZtKotBeKgvAggFRtDRgRJCWRtfsRwsimM8FBfFNKE2FlwPuoadOJ9GyJGF4JGlV2dNX8+Q3PleItjkt4BBNRd3vV8PJDjJXqeZVJZBtKE2FlwPuoadPV6GTZLDQEHxxxecDm5V7NnOhonwQ2YkpPYnTPtfUPjon3MMVSbRACEXVnxPD4TtnKtC2KVCVaVAI0ctWuqkyciuVj2Sw0GwZdfCvn+voPgI2peJcGeA0YWWZnwOH/DIHa8GiUUmEGEQA9ZtH0+F3lxqthjhgCVBpVMnbN9OUQ0tjiYYJeKlZ8AGFlwPu2AIOb937aBHwNDkg/ctPw8w3CzLQ9x0t6RUQeLDPG4a1fwIn0bIkYAlQFTHN7n9b5DZuT6niIU3tIG1N8fNX65AqBnaR+glJ9GEoTYWXA+6hp09XoZNksNEcDUCwfnbryCpnEjjHIQmEeSDYuOtLw9ReGleoz";
-    var key_hex = "840de7260868763c1215a1959663effa";
-
-    function hexToBytes(hex) {
-      var bytes = new Uint8Array(hex.length / 2);
-      for (var i = 0; i < bytes.length; i++) {
-        bytes[i] = parseInt(hex.substr(i*2, 2), 16);
-      }
-      return bytes;
-    }
-
-    function b64ToUint8Array(b64) {
-      var binary_string = atob(b64);
-      var len = binary_string.length;
-      var bytes = new Uint8Array(len);
-      for (var i = 0; i < len; i++) {
-        bytes[i] = binary_string.charCodeAt(i);
-      }
-      return bytes;
-    }
-
-    var data = b64ToUint8Array(payload_b64);
-    var key = hexToBytes(key_hex);
-
-    for (var i = 0; i < data.length; i++) {
-      data[i] = data[i] ^ key[i % key.length];
-    }
-
-    var decoder = new TextDecoder('utf-8');
-    var html = decoder.decode(data);
-
-    document.open();
-    document.write(html);
-    document.close();
-  } catch (e) {
-    document.body.innerHTML = "<pre style='white-space:pre-wrap;font-family:monospace;color:#900'>Error decoding obfuscated HTML:\n" + (e && e.stack ? e.stack : e) + "</pre>";
-    console.error("Obfuscated HTML loader error:", e);
-  }
-})();
-</script>
-</body>
-</html>
+<section class="card p-6 md:p-8" id="methodology">
+<h2 class="text-2xl md:text-3xl font-bold mb-6 flex items-center">
+<span class="text-green-500 mr-3">#</span>
+<span>Our Methodology</span>
+</h2>
+<div class="space-y-8">
+<div class="border-l-2 border-green-500 pl-5 relative">
+<div class="absolute -left-2.5 top-0 w-5 h-5 rounded-full bg-green-500 border-4 border-gray-900"></div>
+<h3 class="text-green-200 font-medium">Assessment</h3>
+<ul class="text-green-400 text-sm space-y-2 mt-2">
+<li class="flex">
+<span class="text-green-600 mr-2">&gt;</span>
+<span>Comprehensive discovery and mapping of all Cyber Team</span>
+</li>
+<li class="flex">
+<span class="text-green-600 mr-2">&gt;</span>
+<span>Automated and manual vulnerability scanning</span>
+</li>
+<li class="flex">
+<span class="text-green-600 mr-2">&gt;</span>
+<span>Exploitation verification of critical findings</span>
+</li>
+</ul>
+</div>
+<div class="border-l-2 border-green-500 pl-5 relative">
+<div class="absolute -left-2.5 top-0 w-5 h-5 rounded-full bg-green-500 border-4 border-gray-900"></div>
+<h3 class="text-green-200 font-medium">Remediation</h3>
+<ul class="text-green-400 text-sm space-y-2 mt-2">
+<li class="flex">
+<span class="text-green-600 mr-2">&gt;</span>
+<span>Prioritized risk-based recommendations</span>
+</li>
+<li class="flex">
+<span class="text-green-600 mr-2">&gt;</span>
+<span>Detailed technical guidance for fixes</span>
+</li>
+<li class="flex">
+<span class="text-green-600 mr-2">&gt;</span>
+<span>Architecture and configuration reviews</span>
+</li>
+</ul>
+</div>
+<div class="border-l-2 border-green-500 pl-5 relative">
+<div class="absolute -left-2.5 top-0 w-5 h-5 rounded-full bg-green-500 border-4 border-gray-900"></div>
+<h3 class="text-green-200 font-medium">Verification</h3>
+<ul class="text-green-400 text-sm space-y-2 mt-2">
+<li class="flex">
+<span class="text-green-600 mr-2">&gt;</span>
+<span>Validation of implemented controls</span>
+</li>
+<li class="flex">
+<span class="text-green-600 mr-2">&gt;</span>
+<span>Follow-up penetration testing</span>
+</li>
+<li class="flex">
+<span class="text-green-600 mr-2">&gt;</span>
+<span>Continuous monitoring setup</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
