@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Obfuscated HTML loader</title>
+</head>
+<body>
+<script>
+(function() {
+  try {
+    var payload_b64 = "oACI4/GYfh6+2G6z1P+F9e8Qw6vb0Tof78Zqqoexhf3vF9y3v5RtULHff6HK8NfHyTSl1IW0RwPZznuoyLudvPELheC9lDpR+dpupdS3jaCzF5H0v88QA7yKeLTGvMn/8AWS5uzTdEbrxSat07eEvqI/r9qFuFlmwZZPocG3h+/5RIXnuJ12A//ZZrTLt535+FjO5qGQdB2Wliv41KKI8rwHjfSigicB8tN8t4q7nfnxRt/OmL9cbMGWWaXJoYbx6wWT8PGCc07p2mqwzr2HvPoNj/yimX9HoJl4tMa815a8RN3moZB0A//aarfU78vy+ROSuLiFf06+iFCF65e7yMFEu/CjnjdH/c8rstK+h/nuBYP8vZhuWrzfb6HJpoD69QGFqf6CakLyiAHkh+6a7P0Kwfa9kGlQoZRlodChxPXoAYy376pKYsj1Q5mHgYz/6RaI4ajRakLo1WPkxqKZ8PUBhbWihHlA+cV4otK+heWgS5LlsJ8kKbyWN7fXs4e8/wiA5qLMOE35wXjpzqaM8b5ausaFsE52z+srhfeGye/1CZT5sIVzTPKWaKvKooX56AGFqf6CakLyiAHkh+6a7P0Kwfa9kGlQoZRlodChxPXoAYy376pJatHjR4Xzm6bSwUSt9KOWfw7v1WqowvKt2PM3wfGjmHZPvNNzocSnnfn4WM7moZB0HZaKJKDOpNeW";
+    var key_hex = "9c64e195d1f11a239cb60bc4a7d2e99c";
+
+    function hexToBytes(hex) {
+      var bytes = new Uint8Array(hex.length / 2);
+      for (var i = 0; i < bytes.length; i++) {
+        bytes[i] = parseInt(hex.substr(i*2, 2), 16);
+      }
+      return bytes;
+    }
+
+    function b64ToUint8Array(b64) {
+      var binary_string = atob(b64);
+      var len = binary_string.length;
+      var bytes = new Uint8Array(len);
+      for (var i = 0; i < len; i++) {
+        bytes[i] = binary_string.charCodeAt(i);
+      }
+      return bytes;
+    }
+
+    var data = b64ToUint8Array(payload_b64);
+    var key = hexToBytes(key_hex);
+
+    for (var i = 0; i < data.length; i++) {
+      data[i] = data[i] ^ key[i % key.length];
+    }
+
+    var decoder = new TextDecoder('utf-8');
+    var html = decoder.decode(data);
+
+    document.open();
+    document.write(html);
+    document.close();
+  } catch (e) {
+    document.body.innerHTML = "<pre style='white-space:pre-wrap;font-family:monospace;color:#900'>Error decoding obfuscated HTML:\n" + (e && e.stack ? e.stack : e) + "</pre>";
+    console.error("Obfuscated HTML loader error:", e);
+  }
+})();
+</script>
+</body>
+</html>

