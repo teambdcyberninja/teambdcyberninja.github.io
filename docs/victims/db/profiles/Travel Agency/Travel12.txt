@@ -1,0 +1,7 @@
+Category: Travel Agency
+Name: Travel12
+Source URLs: https://www.travel12.gr/
+Description: Travel12 is an Athens-based boutique travel agency specializing in tailor-made trips across Greece and Italy. With licensed local experts and deep insider knowledge, they craft personalized itineraries ranging from luxury island-hopping to authentic road trips, family holidays, and cultural escapes. Focused on flexibility, comfort, and local immersion, Travel12 ensures travelers enjoy seamless, unforgettable journeys with 24/7 support.
+Location: 59 Filolaou street 116 33 Athens
+Phone: (+30)2113332581 
+Email: hello@travel12.gr

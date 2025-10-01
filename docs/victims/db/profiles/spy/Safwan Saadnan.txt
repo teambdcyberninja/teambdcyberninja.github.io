@@ -1,0 +1,64 @@
+
+Confirmed by TeamBD Cyber Ninja Spy Agent
+
+Target Information
+
+Target Name: Safwan Saadnan
+Father Name: Salek Sabbir Ahmed
+Mother Name: Shamima Shamim
+Location: Mogbazar
+AGE: 19 +
+Date Of Birth: 30/07/2004
+IP Address: 103.163.116.0/23
+Mac Address: 6e:c4:30:14:99:da
+University: BRACU
+Device Name: Oppo CPH2269
+Gmail Name: nihadalam56@gmail.com
+
+Target ISP Information:
+  Netblock         Company               Num of IPs
+  103.163.116.0/23 Moghbazar Dot Net     512
+  103.163.116.0/24 Moghbazar Dot Net     256
+  103.163.117.0/24 Moghbazar Dot Net     256
+
+Target ISP Server Data:
+  Hosted domains: 0
+  Number of IPv4: 512
+  Number of IPv6: 1.21 × 1024
+  ASN type: ISP
+  Registry: apnic
+
+Allocation / Update (netblock metadata):
+  Allocated: 5 years ago on Feb 25, 2021
+  Updated: 4 years ago on Sep 15, 2021
+
+Target NID Card Picture: (image included in PDF)
+  - NID image present on page 2 (showing NID card with photograph)
+  - NID ID number (as visible on NID image in PDF): 8268709667
+  - Date of Birth on NID image: 30 Jul 2004
+  - NID name shown: SAFWAN SAADNAN
+
+Target Number Information:
+  Number: +8801744760483
+  Country: Bangladesh
+  TrueCaller Says: Name: Sadnan, Carrier: Grameenphone
+  Unknown Says: Name: Safwan Biam
+  WhatsApp link: https://wa.me/+8801744760483
+  Telegram link: https://t.me/+8801744760483
+
+ISP SERVER HIJACK TRACE OUT INFORMATION (traceroute excerpt from PDF):
+  Command shown:
+    traceroute -a -n -q1 -f3 103.163.116.168
+
+  Output excerpt (as printed in PDF):
+    traceroute to 103.163.116.168 (103.163.116.168): 64 hops max, 52 byte packets
+    3 [] 103.151.197.30 0.616 ms
+    4 [AS141745] 103.163.116.168 0.919 ms
+
+ASN referenced in traceroute: AS141745
+Reported example IP shown in traceroute: 103.163.116.168
+
+Other textual notes in document:
+  - Portrait photo of target included (page 1)
+  - Document header: "TEAM BD CYBER NINJA OFFICIAL SPY AGENTS"
+  - Several bold/underlined netblocks and links are present in the original PDF

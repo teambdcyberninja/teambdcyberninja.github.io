@@ -1,0 +1,14 @@
+Category: Travel Agent
+Name: Alexey Elpiadis
+Source URLs: https://elpiadis.com/
+Description: Alexey Elpiadis is a licensed Russian-speaking tour guide based in Athens, Greece, with over 20 years of experience. Born in Moscow and educated in Athens, he blends deep historical knowledge with engaging storytelling to bring Greece’s monuments and culture to life. Offering excursions across Athens, Delphi, Meteora, Olympia, and island cruises, Alexey provides personalized tours enriched with context, humor, and insight — ensuring travelers experience Greece not just as ruins, but as living history.
+Location: Athens, Greece
+Phone: 306948606677
+Email: elpiadis.tour@gmail.com
+Platform Username: Website
+Resume/CV: No
+Services Offered: Travel Guide
+Skills/Tools: Travel Guide
+Typical Rates Per Hour: --
+Languages: Greek, English, Russian
+Confidence: High
