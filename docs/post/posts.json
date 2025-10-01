@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Zero-Day Exploit Analysis",
+    "description": "Deep dive into a recent critical vulnerability discovered in the financial sector.",
+    "file": "zero-day.html"
+  },
+  {
+    "title": "Dark Web Market Trends",
+    "description": "Tracking the underground economy: what’s hot, what’s declining, and new tools emerging.",
+    "file": "dark-web.html"
+  },
+  {
+    "title": "Nation-State Attacks 2025",
+    "description": "Comprehensive breakdown of government-backed cyber operations across regions.",
+    "file": "state-attacks.html"
+  }
+]

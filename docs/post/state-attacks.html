@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nation-State Attacks 2025</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --primary:#10b981; --accent:#34d399; --dark:#0a0a0a; }
+    body { background-color:var(--dark); color:#c7f9da; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace; }
+    .card { background:#0d0d0d; border:1px solid rgba(16,185,129,0.2); border-radius:.5rem; padding:1rem; transition:.3s; }
+    .card:hover { border-color:rgba(16,185,129,.5); transform:translateY(-2px); }
+    .muted { color:#94a3b8; }
+    .cursor { width:10px; height:1.2rem; background:var(--accent); animation:blink 1s step-end infinite; display:inline-block; }
+    @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0;} }
+  </style>
+</head>
+<body class="p-6 max-w-4xl mx-auto">
+
+  <!-- Header -->
+  <header class="mb-8">
+    <h1 class="text-3xl font-bold text-green-300">Nation-State Attacks 2025 <span class="cursor"></span></h1>
+    <p class="muted text-sm">Published: Mar 2025</p>
+  </header>
+
+  <!-- Content -->
+  <main class="space-y-6">
+    <div class="card">
+      <p class="mb-4">
+        Nation-state cyber operations have intensified in 2025, with coordinated attacks 
+        targeting critical infrastructure, healthcare systems, and AI research facilities. 
+        These campaigns often blend phishing, supply-chain compromises, and custom-built 
+        zero-days.
+      </p>
+
+      <p class="mb-4">
+        Attribution points to multiple advanced persistent threat (APT) groups aligned with 
+        regional geopolitical strategies. Organizations are urged to adopt Zero Trust models 
+        and improve monitoring of third-party vendors.
+      </p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-10 pt-5 border-t border-gray-800 text-center text-sm text-gray-500">
+    <a href="../index.html#publication" class="text-emerald-300 hover:underline">← Back to Publications</a>
+  </footer>
+
+</body>
+</html>
