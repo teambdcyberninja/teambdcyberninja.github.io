@@ -1,7 +1,0 @@
-Category: Travel Agency
-Name: GA TRIPS
-Source URLs: https://www.greeceadventuretrips.com/
-Description: GA Trips, based in Athens, is a local travel agency specializing in tailor-made vacations and adventure tours across Greece. With over 40 years of combined experience and 5,000+ satisfied clients, they offer customized travel packages, cultural tours, outdoor activities, eco-tourism, food & wine trips, and educational tours. Known for local expertise and handpicked partners, GA Trips ensures authentic experiences, competitive pricing, and traveler safety while supporting Greece’s local economy.
-Location: Athens, Greece
-Phone: 306947129423
-Email: ​info@greeceadventuretrips.com

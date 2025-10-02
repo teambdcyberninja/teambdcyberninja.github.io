@@ -1,7 +1,0 @@
-Category: Travel Agency
-Name: Fantacy Travel
-Source URLs: https://www.fantasy.gr/
-Description: Fantasy Travel, founded in 1983 and based in Athens, Greece, is a certified and widely trusted tour operator with over 36 years of experience. Licensed by IATA, HATTA, and EOT, the agency specializes in tailor-made vacation packages, private tours, cruises, transfers, and accommodation services across Greece. Known for its multilingual team and personalized service, Fantasy Travel has built a strong reputation for quality and reliability.
-Location: 19, Filellinon St.105 57 Athens, Greece
-Phone: (+30) 210-3310530
-Email: fantasy@fantasy.gr
