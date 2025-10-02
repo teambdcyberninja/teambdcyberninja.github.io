@@ -7,10 +7,10 @@ let currentSource = "files.json"; // track active dataset
 // Load files from files.json or new.json
 async function loadFiles(path = "files.json") {
   try {
-    const res = await fetch(path);
+    const res = await fetch(path + "?_=" + Date.now(), { cache: "no-store" }); // cache-busting
     let files = await res.json();
 
-    // Store as objects so we can tag "new"
+    // Prefix with db/ since files are stored there
     allFiles = files.map(f => ({
       path: "db/" + f,
       isNew: path === "new.json"
@@ -29,11 +29,10 @@ function escapeRegExp(string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 }
 
-// Theme-aware highlight: amber background + black text for high visibility
+// High-contrast highlight: amber bg + black text
 function highlightMatch(filename, query) {
   if (!query || query.includes("*") || /AND|OR|NOT|"/i.test(query)) return filename;
 
-  // Highlight any of the words typed (case-insensitive), longest first
   const terms = query
     .trim()
     .replace(/["']/g, "")
@@ -159,7 +158,7 @@ function showResults(reset = true) {
         suggestions.forEach(s => {
           const name = s.path.split("/").pop();
           const btn = document.createElement("button");
-          btn.className = "text-emerald-400 underline mx-1 suggestion-btn";
+          btn.className = "text-amber-400 underline mx-1 suggestion-btn";
           btn.textContent = name;
           btn.dataset.name = name;
           btn.addEventListener("click", () => useSuggestion(name));
@@ -190,7 +189,7 @@ function showResults(reset = true) {
     let badge = isNew ? `<span class="ml-2 text-xs text-black bg-emerald-400 rounded px-1">NEW</span>` : "";
 
     card.innerHTML = `
-      <div class="font-semibold text-emerald-300">${getFileIcon(fileName)} ${highlightMatch(fileName, query)} ${badge}</div>
+      <div class="font-semibold">${getFileIcon(fileName)} ${highlightMatch(fileName, query)} ${badge}</div>
       <div class="mt-2 flex gap-3 text-xs">
         <a href="${encodeURI(f)}" target="_blank" class="text-emerald-400 hover:underline">Open</a>
         <a href="${encodeURI(f)}" download class="text-emerald-200 hover:underline">Download</a>
