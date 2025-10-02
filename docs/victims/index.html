@@ -1,42 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
   <title>OPEN DB</title>
+  <!-- Load Tailwind CSS from CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body { background:#071014; color:#c7f9da; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace; }
-    .card { background:#0d1620; border:1px solid rgba(16,185,129,0.08); border-radius:.5rem; padding:.75rem; }
+    body { 
+      background:#071014; 
+      color:#c7f9da; 
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace; 
+    }
+    .card { 
+      background:#0d1620; 
+      border:1px solid rgba(16,185,129,0.08); 
+      border-radius:.5rem; 
+      padding:.75rem; 
+    }
     .muted { color:#94a3b8; }
     a { word-break: break-all; }
     .small { font-size: .85rem; }
   </style>
 </head>
-<body class="min-h-screen p-6">
-  <div class="max-w-6xl mx-auto space-y-6">
+
+<body class="min-h-screen flex flex-col items-center p-4">
+
+  <!-- Main Container -->
+  <div class="w-[95%] bg-[#0d1620] rounded-xl shadow-md p-4 border border-emerald-900/20">
 
     <!-- Header -->
-    <header>
-      <h1 class="text-2xl font-bold text-green-300">📂 OPEN DB</h1>
-    </header>
+    <h1 class="text-2xl font-bold text-emerald-400 text-center mb-3">
+      📂 OPEN DB
+    </h1>
+    <p class="muted text-center mb-4 text-sm">
+      You are working with sensitive info, be cautious. Use it at your own risks.
+    </p>
 
-    <!-- Controls -->
-    <div class="card flex flex-col gap-3">
-      <div class="flex gap-2">
-        <input id="searchBox" type="text" placeholder="Search..."
-          class="flex-1 px-3 py-2 rounded bg-slate-900 border border-slate-700 text-sm focus:outline-none" />
-        <button id="refreshBtn" class="px-3 py-2 rounded bg-emerald-600 hover:bg-emerald-700 text-sm">Refresh</button>
-        <button id="newBtn" class="px-3 py-2 rounded bg-blue-600 hover:bg-blue-700 text-sm">New</button>
-      </div>
+    <!-- Search Controls -->
+    <div class="flex space-x-2 mb-4">
+      <input id="searchBox" type="text" placeholder="Search files..."
+        class="flex-1 p-2 rounded bg-slate-900 border border-slate-700 text-sm text-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-500" />
+      <button id="allBtn" class="px-3 py-2 bg-emerald-600 text-black text-sm rounded-lg hover:bg-emerald-700">
+        All
+      </button>
+      <button id="newBtn" class="px-3 py-2 bg-blue-600 text-white text-sm rounded-lg hover:bg-blue-700">
+        New
+      </button>
     </div>
 
+    <!-- Suggestions -->
+    <div id="suggestion" class="text-center text-emerald-300 text-sm mb-2"></div>
+
     <!-- Results -->
-    <div id="results" class="grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"></div>
-    <div id="empty" class="muted text-sm text-center">No files loaded.</div>
+    <div id="results" class="grid gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 text-sm"></div>
+
+    <!-- Default Page -->
+    <div id="defaultPage" class="text-center muted mt-6 text-sm">
+      <p>Start typing in the search box to find files 📂</p>
+    </div>
   </div>
 
-  <!-- Script -->
+  <!-- Scroll Controls -->
+  <div id="scrollControls" class="fixed bottom-5 right-5 z-40 flex flex-col gap-2">
+    <button id="backToTop" aria-label="Back to top"
+      class="hidden bg-emerald-900/70 text-emerald-200 w-10 h-10 rounded-full flex items-center justify-center opacity-50 hover:opacity-90 transition">
+      ▲
+    </button>
+    <button id="scrollToBottom" aria-label="Scroll to bottom"
+      class="hidden bg-emerald-900/70 text-emerald-200 w-10 h-10 rounded-full flex items-center justify-center opacity-50 hover:opacity-90 transition">
+      ▼
+    </button>
+  </div>
+
+  <!-- JS -->
   <script src="./app.js"></script>
+
 </body>
 </html>
